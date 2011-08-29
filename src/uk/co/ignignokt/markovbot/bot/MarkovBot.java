@@ -20,7 +20,9 @@ public class MarkovBot extends PircBot {
 	
     public void onMessage(String channel, String sender, String login, String hostname, String message) {
     	if (message.matches("(!line)|!line .*")) {
-    		sendMessage(channel, markov.getSentence());
+    		String x = markov.getSentence();
+    		while(x.split(" ").length < 6){ x = markov.getSentence(); }
+    		sendMessage(channel, x);
     	} else {
     		markov.addParagraph(message);
     		try {
