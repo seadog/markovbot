@@ -28,8 +28,7 @@ public class Backup {
 	}
 	
 	public void addParagraph(String paragraph) throws IOException{
-		System.out.println("doing it...");
-		fw.write("\n" + paragraph + "\n");
+		fw.write(paragraph + "\n");
 		fw.flush();
 	}
 }
