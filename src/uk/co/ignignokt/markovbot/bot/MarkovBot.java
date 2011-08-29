@@ -13,7 +13,7 @@ public class MarkovBot extends PircBot {
 	Backup backup;
 	
 	public MarkovBot(IrcMarkov markov, Backup backup){
-        this.setName("MarkovBot");
+        this.setName("MarkovBotTester");
 		this.markov = markov;
 		this.backup = backup;
 	}
