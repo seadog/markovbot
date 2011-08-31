@@ -27,8 +27,8 @@ public class Backup {
 		br.close();
 	}
 	
-	public void addSentence(String paragraph) throws IOException{
-		fw.write(paragraph + "\n");
+	public void addSentence(String sentence) throws IOException{
+		fw.write(sentence + "\n");
 		fw.flush();
 	}
 }
