@@ -22,12 +22,12 @@ public class Backup {
 		
 		String line;
 		while((line = br.readLine()) != null)
-			irc.addParagraph(line);
+			irc.addSentence(line);
 		
 		br.close();
 	}
 	
-	public void addParagraph(String paragraph) throws IOException{
+	public void addSentence(String paragraph) throws IOException{
 		fw.write(paragraph + "\n");
 		fw.flush();
 	}

@@ -24,9 +24,9 @@ public class MarkovBot extends PircBot {
     		while(x.split(" ").length < 6){ x = markov.getSentence(); }
     		sendMessage(channel, x);
     	} else {
-    		markov.addParagraph(message);
+    		markov.addSentence(message);
     		try {
-				backup.addParagraph(message);
+				backup.addSentence(message);
 			} catch (IOException e) {
 				e.printStackTrace();
 			}
