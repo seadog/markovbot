@@ -6,13 +6,13 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import uk.co.ignignokt.markov.external.UnicodeReader;
-import uk.co.ignignokt.markov.irc.IrcMarkov;
+import uk.co.ignignokt.markov.Markov;
 
 public class Backup {
 	FileWriter fw;
-	IrcMarkov irc;
+	Markov irc;
 
-	public Backup(IrcMarkov irc) throws IOException{
+	public Backup(Markov irc) throws IOException{
 		fw = new FileWriter("backup.txt", true);
 		this.irc = irc;
 		

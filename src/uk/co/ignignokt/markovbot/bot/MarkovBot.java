@@ -5,15 +5,15 @@ import java.io.IOException;
 
 import org.jibble.pircbot.PircBot;
 
-import uk.co.ignignokt.markov.irc.IrcMarkov;
+import uk.co.ignignokt.markov.Markov;
 import uk.co.ignignokt.markovbot.Backup;
 
 public class MarkovBot extends PircBot {
-	IrcMarkov markov;
+	Markov markov;
 	Backup backup;
 	
-	public MarkovBot(IrcMarkov markov, Backup backup){
-        this.setName("MarkovBotTester");
+	public MarkovBot(Markov markov, Backup backup){
+        this.setName("MarkovBot");
 		this.markov = markov;
 		this.backup = backup;
 	}
