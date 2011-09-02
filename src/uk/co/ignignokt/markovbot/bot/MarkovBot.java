@@ -12,8 +12,11 @@ public class MarkovBot extends PircBot {
         Markov markov;
         Backup backup;
 
+        public void setNick(String nick){
+                this.setName(nick);
+        }
+
         public MarkovBot(Markov markov, Backup backup) {
-                this.setName("MarkovBot");
                 this.markov = markov;
                 this.backup = backup;
         }
