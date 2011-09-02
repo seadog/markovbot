@@ -14,18 +14,20 @@
         <path id="classpath">
                 <fileset dir="${lib}" includes="**/*.jar"/>
         </path>
-	
+
 	<target name="init">
 		<tstamp/>
 		<mkdir dir="${build}"/>
 	</target>
 
 	<target name="compile" depends="init" description="Compile source code">
+                <copy file="../Markov/dist/markov-${version}.jar" tofile="lib/markov-${version}.jar" />
 	        <javac srcdir="${src}" destdir="${build}" classpathref="classpath" includeantruntime="false"/>
 	</target>
 
 	<target name="dist" depends="compile" description="Create JAR file">
 		<mkdir dir="${dist}"/>
+
 	        <jar destfile="${dist}/markovbot-${version}.jar" basedir="${build}">
 	        	<zipgroupfileset dir="${lib}" includes="*.jar"/>
 	                <manifest>
