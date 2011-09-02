@@ -50,7 +50,7 @@
         <java-data xmlns="http://www.netbeans.org/ns/freeform-project-java/1">
             <compilation-unit>
                 <package-root>src</package-root>
-                <classpath mode="compile">lib/markov-0.1.jar:lib/pircbot.jar</classpath>
+                <classpath mode="compile">lib/markov-0.1.jar:lib/pircbot.jar:/home/andy/code/Markov/Markov/src</classpath>
                 <source-level>1.5</source-level>
             </compilation-unit>
         </java-data>
