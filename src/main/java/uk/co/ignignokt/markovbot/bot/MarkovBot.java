@@ -21,6 +21,7 @@ public class MarkovBot extends PircBot {
                 this.backup = backup;
         }
 
+        @Override
         public void onMessage(String channel, String sender, String login, String hostname, String message) {
                 if (message.matches("(!line)|!line .*")) {
                         String x = markov.getSentence();
