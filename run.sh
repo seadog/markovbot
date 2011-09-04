@@ -1,0 +1,1 @@
+java -cp ~/.m2/repository/MarkovBot/MarkovBot/0.1.0/MarkovBot-0.1.0.jar:~/.m2/repository/pircbot/pircbot/1.5.0/pircbot-1.5.0.jar:~/.m2/repository/Markov/Markov/0.1.0/Markov-0.1.0.jar uk.co.ignignokt.markovbot.Main
