@@ -8,4 +8,4 @@ if [ "$M2_REPO" == "" ]; then
     exit;
 fi
 
-java -Xmn5M -Xms10M -Xmx10M -XX:MaxPermSize=16m -cp "$M2_REPO/pircbot/pircbot/1.5.0/pircbot-1.5.0.jar:$M2_REPO/Markov/Markov/0.1.0/Markov-0.1.0.jar:$M2_REPO/MarkovBot/MarkovBot/0.1.0/MarkovBot-0.1.0.jar" uk.co.ignignokt.markovbot.Main &
+java -Xmn5M -Xms10M -Xmx10M -XX:MaxPermSize=16m -cp "$M2_REPO/pircbot/pircbot/1.5.0/pircbot-1.5.0.jar:$M2_REPO/uk/co/ignignokt/markov/0.1.0/markov-0.1.0.jar:$M2_REPO/uk/co/ignignokt/markovbot/0.1.0/markovbot-0.1.0.jar" uk.co.ignignokt.markovbot.Main &
