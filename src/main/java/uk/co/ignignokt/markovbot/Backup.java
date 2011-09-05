@@ -6,16 +6,16 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 import uk.co.ignignokt.markov.external.UnicodeReader;
-import uk.co.ignignokt.markov.Markov;
+import uk.co.ignignokt.markov.Chain;
 
 public class Backup {
 
         FileWriter fw;
-        Markov irc;
+        Chain chain;
 
-        public Backup(Markov irc) throws IOException {
+        public Backup(Chain chain) throws IOException {
                 fw = new FileWriter("backup.txt", true);
-                this.irc = irc;
+                this.chain = chain;
 
                 FileInputStream fis = new FileInputStream("backup.txt");
                 UnicodeReader ur = new UnicodeReader(fis, "UTF-8");
@@ -23,7 +23,7 @@ public class Backup {
 
                 String line;
                 while ((line = br.readLine()) != null) {
-                        irc.addSentence(line);
+                        chain.addSentence(line);
                 }
 
                 br.close();

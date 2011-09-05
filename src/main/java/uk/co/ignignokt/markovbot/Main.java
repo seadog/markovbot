@@ -7,14 +7,14 @@ import java.util.Properties;
 import org.jibble.pircbot.IrcException;
 import org.jibble.pircbot.NickAlreadyInUseException;
 
-import uk.co.ignignokt.markov.Markov;
+import uk.co.ignignokt.markov.Chain;
 import uk.co.ignignokt.markovbot.bot.MarkovBot;
 
 public class Main {
 
         public Main() throws NickAlreadyInUseException, IOException, IrcException {
-                Markov markov = new Markov();
-                MarkovBot bot = new MarkovBot(markov, new Backup(markov));
+                Chain chain = new Chain();
+                MarkovBot bot = new MarkovBot(chain, new Backup(chain));
 
                 Properties config = new Properties();
                 FileInputStream in = new FileInputStream("bot.properties");
